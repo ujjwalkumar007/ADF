@@ -1,0 +1,35 @@
+{
+	"name": "scheduled_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyAllTables",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"SchemaName": "SalesLT"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2024-07-09T16:34:00",
+				"timeZone": "India Standard Time",
+				"schedule": {
+					"minutes": [
+						25
+					],
+					"hours": [
+						0
+					]
+				}
+			}
+		}
+	}
+}
